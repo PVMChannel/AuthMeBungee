@@ -40,6 +40,8 @@ public class BungeeConfigProperties implements SettingsHolder {
     @Comment("If sendOnLogout is enabled, unlogged users will be sent to this server!")
     public static final Property<String> SEND_ON_LOGOUT_TARGET =
         newProperty("unloggedUserServer", "");
+    @Comment("If a player logs in with the hostname, which is the index, they will get sent to the server, which is the value")
+    public static final Property<Map<String, String>> = newProperty("forcedHosts", "");
 
     private BungeeConfigProperties() {
     }
